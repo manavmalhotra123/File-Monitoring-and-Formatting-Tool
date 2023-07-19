@@ -41,3 +41,19 @@ source venv/bin/activate
 4. Install the required dependencies:
 
 pip install -r requirements.txt
+
+
+
+### With Docker
+
+1. Clone the repository:
+
+
+2. Navigate to the project directory:
+
+
+3. Build the Docker image:
+
+docker build -t code-formatting-tool .
+
+4. run the image the overwrite the name of folder when building image 
