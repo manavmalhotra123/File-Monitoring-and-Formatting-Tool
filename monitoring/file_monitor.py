@@ -35,6 +35,12 @@ class FileChangeHandler(FileSystemEventHandler):
         if not formatted_file_path:
             formatted_file_path = generate_formatted_file_path(file_path)
             self.formatted_file_paths[file_path] = formatted_file_path
+        else:
+            # Delete previous formatted files
+            for path in self.formatted_file_paths.values():
+                if path != formatted_file_path and os.path.exists(path):
+                    os.remove(path)
+            self.formatted_file_paths[file_path] = formatted_file_path
 
         save_formatted_file(formatted_file_path, formatted_content)
 
@@ -48,6 +54,12 @@ class FileChangeHandler(FileSystemEventHandler):
         formatted_file_path = self.formatted_file_paths.get(file_path)
         if not formatted_file_path:
             formatted_file_path = generate_formatted_file_path(file_path)
+            self.formatted_file_paths[file_path] = formatted_file_path
+        else:
+            # Delete previous formatted files
+            for path in self.formatted_file_paths.values():
+                if path != formatted_file_path and os.path.exists(path):
+                    os.remove(path)
             self.formatted_file_paths[file_path] = formatted_file_path
 
         save_formatted_file(formatted_file_path, formatted_content)
