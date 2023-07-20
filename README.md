@@ -62,4 +62,5 @@ docker build -t code-formatting-tool .
 
 
 ## Demo Video
-file:///home/manav/Videos/Screencasts/Screencast%20from%2020-07-23%2002:23:28%20PM%20IST.webm
+[Screencast from 20-07-23 02:23:28 PM IST.webm](https://github.com/manavmalhotra123/File-Monitoring-and-Formatting-Tool/assets/110531978/2e840b4a-3fa2-44ab-bffe-95ec7bb92e9b)
+
